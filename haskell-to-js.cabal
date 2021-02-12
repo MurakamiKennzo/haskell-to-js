@@ -1,0 +1,62 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 95b969a334864d1cd89a5676cd81da997a9a03e43d3bfa9512d3afca54efd13b
+
+name:           haskell-to-js
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/MurakamiKennzo/haskell-to-js#readme>
+homepage:       https://github.com/MurakamiKennzo/haskell-to-js#readme
+bug-reports:    https://github.com/MurakamiKennzo/haskell-to-js/issues
+author:         murakami
+maintainer:     example@example.com
+copyright:      2021 murakami
+license:        MIT
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/MurakamiKennzo/haskell-to-js
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_haskell_to_js
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable haskell-to-js-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_haskell_to_js
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , haskell-to-js
+  default-language: Haskell2010
+
+test-suite haskell-to-js-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_haskell_to_js
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , haskell-to-js
+  default-language: Haskell2010
